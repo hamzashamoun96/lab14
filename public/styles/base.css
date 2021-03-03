@@ -1,0 +1,147 @@
+@media (max-width:500px){
+    body{
+        background-color: rgb(167, 167, 167);
+    }
+    header{
+        grid-row: 1/2;
+        display: grid;
+        background-color: black;
+        grid-template-columns: 10fr 1fr ;
+    }
+    footer{
+        grid-row: 3/4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        background-color: black;
+    }
+    .menu{
+        width: 35px;
+        height: 4px;
+        background-color: black;
+        margin: 6px 0;
+        grid-column: 2/3;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #title{
+        grid-column: 1/2;
+        color: rgb(235, 235, 235);
+        font-size: 25px;
+        padding: 10px 0 0 10px;
+    }
+    .topnav{
+        cursor: pointer;
+        padding: 6px 0 0 0 ;
+    }
+    #searchNav{
+        cursor: pointer;
+        border-top: 0px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        padding-top: 18px;
+        display: block;
+    }
+    .toggle {
+        display: none;
+    }
+    .toggle{
+        height: 50px;
+        background-color: gray;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .toggle:hover{
+        background-color:rgb(82, 82, 82);
+    }
+    .form{
+        width: 80%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    #topForm{
+        text-align: center;
+        height: 50px;
+        background-color: rgb(85, 85, 85);
+        color: white;
+        margin-bottom: 20px;
+    }
+    #topForm p{
+        padding-top: 18px;
+        font-size: 15px;
+    }
+    #searchBar,.inp{
+        width: 98%;
+        height: 45px;
+    }
+    .inp{
+        margin-bottom: 20px;
+        background-color: rgb(219, 219, 219);
+    }
+    textarea{
+        width: 99%;
+        margin-bottom: 20px;
+        background-color: rgb(219, 219, 219);
+    }
+    .radio{
+        display: flex;
+        align-items: center;
+        height: 45px;
+        background-color: lightgray;
+        margin-top: 20px;
+    }
+    label{
+        padding: 0 50px 0 10px;
+    }
+    button{
+        width: 25px;
+        height: 25px;
+    }
+    #submit{
+        width: 100%;
+        height: 50px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        margin-top: 20px;
+    }
+    .FB{
+        border-radius: 50%;
+    }
+    #aniDiv{
+        display: inline-flex;
+        margin: 20px 0px 20px 7%;
+    }
+    #aniDiv h4 , #aniDiv h3{
+        font-size: 25px;
+        font-weight: 700;
+        color: darkgoldenrod;
+    }
+    @keyframes move {
+        0%   { left:0px; top:0px;}
+        50%  {left:0px; top:3px;}
+        100% { left:0px; top:0px;}
+      }
+
+      #aniDiv h4 {
+        position: relative;
+        animation-name: move;
+        animation-duration: 1000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      #aniDiv h3{
+        position: relative;
+        animation-name: move;
+        animation-duration: 1000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 500ms;
+      }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Best Books!</h1>
+        <div class="topnav">
+            <div class="menu"></div>
+            <div class="menu"></div>
+            <div class="menu"></div>
+        </div>
+    </header>
+    <main>
+
+        <div class="toggle"><a href="/">Home</a></div>
+        <div class="toggle" id="searchNav"><a href="#">Search</a></div>
+
+        <div id="topForm"><p>Search By Title Or Author</p></div>
+    <form action="/searches/new" method="POST" class = 'form'>
+      
+        
+        <input id="searchBar" type="text" placeholder="Enter a Title Or Author" name="searchBook">
+
+        <div class="radio">
+            <label for="">Title&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" name="sort" value="intitle" class="rTitle" >
+        </div>
+       
+        <div class="radio">
+            <label for="">Author</label>
+            <input type="radio" name="sort" value="inauthor" class="rAuthor" >
+        </div>
+
+        <button id="submit" type="submit">Search the Google Books API</button>
+    </form>
+
+    </main>
+    <footer>
+        <button class="FB"></button>
+        <button class="FB"></button>
+        <button class="FB"></button>
+        <button class="FB"></button>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

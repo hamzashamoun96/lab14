@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../layout/head')%>
+<body>
+    <%-include('../layout/header')%>
+    <main>
+
+        <div class="toggle"><a href="/">Home</a></div>
+        <div class="toggle" id="searchNav"><a href="/searches">Search</a></div>
+
+        <div id="topForm"><p>Search By Title Or Author</p></div>
+
+        <section>
+            <h5><%= count%> Books in the Collection</h5>
+            <% homeData.forEach(value =>{ %>
+            <div class="card">
+                <img src="<%= value.image_url %>" alt="">
+                <h2><%= value.title %> </h2>
+                <h2><%= value.author %></h2>
+                <p><%= value.description %></p>
+                <form action="/books/<%= value.id%>">
+                    <button id="btn" type="submit"> View Details </button>
+                </form>
+            </div>
+       <% }) %>
+        </section>
+         
+        
+
+    </main>
+    <%-include('../layout/footer')%>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

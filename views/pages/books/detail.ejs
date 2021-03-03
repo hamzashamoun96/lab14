@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../../layout/head')%>
+<body>
+    <%-include('../../layout/header')%>
+    
+    <div class="toggle" id="firstToggle"><a href="/">Home</a></div>
+    <div class="toggle" id="searchNav"><a href="/searches">Search</a></div>
+   
+    <main> <div class="card">
+            <img src="<%= book.image_url %>" alt="">     
+            <h2><%= book.title %> </h2>
+            <h2><%= book.author %></h2>
+            <h2><%= book.isbn%></h2>
+            <p><%= book.description %></p>
+            <button id="updateBtn">Update Book</button>
+            <form action="/books/<%=book.id%>?-method=delete" method="POST">
+                <button id="deleteBtn"> Delete </button>
+            </form>
+    </div>  
+       
+</main>
+<%-include('../../layout/edit')%>
+    <%-include('../../layout/footer')%>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
